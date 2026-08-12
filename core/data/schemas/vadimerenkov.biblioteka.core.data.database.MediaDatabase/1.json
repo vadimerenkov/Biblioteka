@@ -1,0 +1,93 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "8839eb17f381ca8a7c72d1039578d53b",
+    "entities": [
+      {
+        "tableName": "BookEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `title` TEXT NOT NULL, `coverUrl` TEXT, `description` TEXT, `firstPublishYear` INTEGER, `numPages` INTEGER, `avgOLRating` REAL, `numberOLRatings` INTEGER, `authors` TEXT, `rating` INTEGER, `status` TEXT NOT NULL, `startedOn` INTEGER, `finishedOn` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coverUrl",
+            "columnName": "coverUrl",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "firstPublishYear",
+            "columnName": "firstPublishYear",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "numPages",
+            "columnName": "numPages",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "avgOLRating",
+            "columnName": "avgOLRating",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "numberOLRatings",
+            "columnName": "numberOLRatings",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "authors",
+            "columnName": "authors",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedOn",
+            "columnName": "startedOn",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "finishedOn",
+            "columnName": "finishedOn",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8839eb17f381ca8a7c72d1039578d53b')"
+    ]
+  }
+}
