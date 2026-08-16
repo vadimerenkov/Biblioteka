@@ -58,4 +58,8 @@
     <string name="add_show">Add show</string>
     <string name="first_air_date">First air date</string>
     <string name="last_air_date">Last air date</string>
+    <string name="about">About</string>
+    <string name="new_version_available">New version available</string>
+    <string name="download_new_version">Download new version</string>
+    <string name="you_have_latest_version">You have the latest version!</string>
 </resources>

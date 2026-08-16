@@ -1,7 +1,10 @@
+import com.codingfeline.buildkonfig.compiler.FieldSpec
+
 plugins {
 	alias(libs.plugins.kotlinMultiplatform)
 	alias(libs.plugins.composeMultiplatform)
 	alias(libs.plugins.composeCompiler)
+	alias(libs.plugins.buildkonfig)
 }
 
 kotlin {
@@ -18,6 +21,8 @@ kotlin {
 				implementation(libs.compose.material3)
 				implementation(libs.compose.components.resources)
 				implementation(libs.material.icons)
+
+				implementation(projects.updateChecker)
 			}
 		}
 	}
@@ -25,4 +30,12 @@ kotlin {
 
 compose.resources {
 	publicResClass = true
+}
+
+buildkonfig {
+	packageName = "vadimerenkov.biblioteka.core.presentation"
+
+	defaultConfigs {
+		buildConfigField(FieldSpec.Type.STRING, "versionName", libs.versions.version.name.get())
+	}
 }

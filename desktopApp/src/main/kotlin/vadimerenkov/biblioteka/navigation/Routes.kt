@@ -11,3 +11,6 @@ data object MoviesRoute: NavKey
 
 @Serializable
 data object ShowsRoute: NavKey
+
+@Serializable
+data object AboutRoute: NavKey

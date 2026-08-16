@@ -21,6 +21,7 @@ dependencies {
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.compose.material3)
     implementation(libs.compose.components.resources)
+    implementation(libs.material.icons)
 
     implementation(projects.core.data)
     implementation(projects.core.domain)
@@ -34,6 +35,7 @@ dependencies {
     implementation(projects.shows.data)
     implementation(projects.shows.domain)
     implementation(projects.shows.presentation)
+    implementation(projects.updateChecker)
 }
 
 compose.desktop {
