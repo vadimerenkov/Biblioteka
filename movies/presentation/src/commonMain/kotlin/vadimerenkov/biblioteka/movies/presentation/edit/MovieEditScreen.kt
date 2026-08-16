@@ -226,7 +226,7 @@ private fun MovieEditRoot(
 					onExpandedChange = { expanded = it }
 				) {
 					TextField(
-						value = state.movie?.status!!.toText(),
+						value = state.movie?.status?.toText() ?: "",
 						onValueChange = {},
 						readOnly = true,
 						trailingIcon = {

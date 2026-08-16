@@ -230,7 +230,7 @@ private fun ShowEditRoot(
 					onExpandedChange = { expanded = it }
 				) {
 					TextField(
-						value = state.show?.status!!.toText(),
+						value = state.show?.status?.toText() ?: "",
 						onValueChange = {},
 						readOnly = true,
 						trailingIcon = {

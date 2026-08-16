@@ -9,9 +9,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsHoveredAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -29,7 +27,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerButton
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -40,10 +37,10 @@ import biblioteka.core.presentation.generated.resources.finished
 import biblioteka.core.presentation.generated.resources.not_started
 import biblioteka.core.presentation.generated.resources.want_to_watch
 import biblioteka.core.presentation.generated.resources.watching
-import coil3.compose.AsyncImage
 import org.jetbrains.compose.resources.stringResource
 import vadimerenkov.biblioteka.core.domain.CompletionStatus
 import vadimerenkov.biblioteka.core.presentation.components.ListDivider
+import vadimerenkov.biblioteka.core.presentation.components.PosterImage
 import vadimerenkov.biblioteka.shows.domain.TvShow
 import vadimerenkov.biblioteka.shows.presentation.list.ShowListAction
 import vadimerenkov.biblioteka.shows.presentation.list.ShowListState
@@ -195,14 +192,7 @@ private fun ShowGridItem(
 				}
 			)
 		}
-		AsyncImage(
-			model = show.posterPath,
-			contentDescription = null,
-			contentScale = ContentScale.Crop,
-			modifier = Modifier
-				.width(200.dp)
-				.aspectRatio(2/3f)
-		)
+		PosterImage(show.posterPath)
 		Text(
 			text = show.title,
 			color = MaterialTheme.colorScheme.onBackground,

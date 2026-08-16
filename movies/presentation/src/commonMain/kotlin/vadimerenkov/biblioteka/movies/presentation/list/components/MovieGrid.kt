@@ -10,9 +10,7 @@ import androidx.compose.foundation.interaction.collectIsHoveredAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -34,7 +32,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.input.pointer.PointerButton
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -45,10 +42,10 @@ import biblioteka.core.presentation.generated.resources.finished
 import biblioteka.core.presentation.generated.resources.not_started
 import biblioteka.core.presentation.generated.resources.want_to_watch
 import biblioteka.core.presentation.generated.resources.watching
-import coil3.compose.AsyncImage
 import org.jetbrains.compose.resources.stringResource
 import vadimerenkov.biblioteka.core.domain.CompletionStatus
 import vadimerenkov.biblioteka.core.presentation.components.ListDivider
+import vadimerenkov.biblioteka.core.presentation.components.PosterImage
 import vadimerenkov.biblioteka.movies.domain.Movie
 import vadimerenkov.biblioteka.movies.presentation.list.MovieListAction
 import vadimerenkov.biblioteka.movies.presentation.list.MovieListState
@@ -250,13 +247,8 @@ private fun GridMovieItem(
 				}
 			}
 		}
-		AsyncImage(
-			model = movie.posterPath,
-			contentDescription = null,
-			contentScale = ContentScale.Crop,
-			modifier = Modifier
-				.width(200.dp)
-				.aspectRatio(2/3f)
+		PosterImage(
+			imagePath = movie.posterPath
 		)
 		Text(
 			text = movie.title,

@@ -1,6 +1,6 @@
 [versions]
 version-code = "1"
-version-name = "0.0.3"
+version-name = "0.0.4"
 
 androidx-lifecycle = "2.11.0-beta01"
 composeMultiplatform = "1.11.0"
