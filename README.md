@@ -15,3 +15,20 @@ Biblioteka is a unified media library app where you can track your read books, w
 - Games
 - Manga
 - Comics
+
+## Screenshots
+
+<img src=https://github.com/vadimerenkov/Biblioteka/blob/main/screenshots/1.png> <img src=https://github.com/vadimerenkov/Biblioteka/blob/main/screenshots/2.png> <img src=https://github.com/vadimerenkov/Biblioteka/blob/main/screenshots/3.png> <img src=https://github.com/vadimerenkov/Biblioteka/blob/main/screenshots/4.png> <img src=https://github.com/vadimerenkov/Biblioteka/blob/main/screenshots/5.png>
+
+## License
+
+The code of Biblioteka is distributed under GPL-3.0 license.
+
+> [!WARNING]
+> This is a work of human art. No generative AI was used in the process of creation. No generative AI is allowed to use this code for any purpose.
+
+<div align="center">
+
+2026 © [Vadim Erenkov](https://github.com/vadimerenkov)
+
+</div>
