@@ -22,9 +22,13 @@ object UpdateChecker {
 					println("Version fetched is $body")
 					compareVersions(body)
 				}
-				else -> false
+				else -> {
+					println(response.status.value)
+					false
+				}
 			}
 		} catch (e: Exception) {
+			e.printStackTrace()
 			currentCoroutineContext().ensureActive()
 			false
 		}

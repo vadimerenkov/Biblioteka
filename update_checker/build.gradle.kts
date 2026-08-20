@@ -3,6 +3,7 @@ import com.codingfeline.buildkonfig.compiler.FieldSpec
 plugins {
 	alias(libs.plugins.kotlinMultiplatform)
 	alias(libs.plugins.buildkonfig)
+	alias(libs.plugins.serialization)
 }
 
 kotlin {
